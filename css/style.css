@@ -145,13 +145,45 @@ body {
   50%       { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0);  }
 }
 
+/* ── NAME GLASS BLOCK ───────────────────────── */
+.name-glass {
+  position: relative;
+  display: inline-block;
+  padding: .6rem 1rem .6rem .75rem;
+  margin-bottom: .65rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-left: 3px solid rgba(0, 0, 0, 0.18);
+  box-shadow:
+    rgba(255,255,255,.35) 0 1px 0 inset,
+    rgba(0,0,0,.06) 0 4px 20px;
+  overflow: hidden;
+}
+/* subtle shimmer overlay */
+.name-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.22) 0%,
+    rgba(255,255,255,.04) 50%,
+    rgba(255,255,255,.12) 100%
+  );
+  pointer-events: none;
+}
+
 .name {
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: clamp(2.2rem, 10vw, 4rem);
   line-height: 1.05;
   letter-spacing: -.02em;
-  margin-bottom: .4rem;
+  margin: 0;
+  position: relative; /* above ::before shimmer */
 }
 
 .headline {
@@ -190,9 +222,11 @@ body {
   box-shadow: 0 4px 14px rgba(0, 0, 0, .10);
   transform: translateY(-1px);
 }
-.chip svg   { flex-shrink: 0; opacity: .7; }
-.chip span  { overflow: hidden; text-overflow: ellipsis; }
-.chip.full  { grid-column: 1 / -1; justify-content: center; }
+.chip svg        { flex-shrink: 0; opacity: .7; }
+.chip span       { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.chip.full       { grid-column: 1 / -1; justify-content: center; }
+/* Email chip – allow wrapping so address doesn't get cut */
+.chip.wrap       { white-space: normal; word-break: break-all; height: auto; min-height: 44px; }
 
 /* ── SOBRE ──────────────────────────────────── */
 .about-text {
