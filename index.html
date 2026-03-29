@@ -1,416 +1,45 @@
 <!DOCTYPE html>
-<!-- Currículo Profissional – Wilkens Costa -->
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Wilkens Costa – Analista de TI & Infraestrutura</title>
-<meta name="description" content="Currículo de Wilkens Costa – Analista de TI especializado em Infraestrutura, Redes e Segurança da Informação. Ceará, Brasil."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="assets/css2_2832c0ff631d.css" rel="stylesheet"/>
-<link href="assets/css2_9b8bf743d4a8.css" rel="stylesheet"/>
-<link href="assets/css2_86e10c4bcbd4.css" rel="stylesheet"/>
-<script src="assets/resource_3fa48481346f.js"></script>
-<style>
-/* ── RESET ─────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-/* ── TOKENS ────────────────────────────── */
-:root {
-  --bg:     #cfddea;
-  --glass:  rgba(255,255,255,0.58);
-  --glass2: rgba(255,255,255,0.80);
-  --shadow: rgba(255,255,255,.12) 0 1px 1px inset,
-            rgba(50,50,93,.22) 0 30px 80px -15px,
-            rgba(0,0,0,.22) 0 18px 45px -20px;
-  --radius: 1.25rem;
-  --radius-sm: .75rem;
-  --text:   #0f0f0f;
-  --muted:  #6b7280;
-  --border: #e5e7eb;
-  --pill-bg:#f9fafb;
-  --accent: #2563eb;
-}
+  <!-- ── SEO ── -->
+  <title>Wilkens Costa – Analista de TI & Infraestrutura</title>
+  <meta name="description" content="Currículo de Wilkens Costa – Analista de TI especializado em Infraestrutura, Redes e Segurança da Informação. Ceará, Brasil."/>
+  <meta name="author" content="José Wilkens da Costa Pereira Filho"/>
+  <meta name="keywords" content="Analista de TI, Infraestrutura, Segurança da Informação, Firewall, Active Directory, n8n, Python, Ceará"/>
+  <meta name="theme-color" content="#cfddea"/>
 
-/* ── BASE ──────────────────────────────── */
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  /* min font size 16px to avoid iOS zoom on inputs */
-  font-size: 16px;
-}
+  <!-- ── Open Graph (compartilhamento no LinkedIn, WhatsApp, etc.) ── -->
+  <meta property="og:type"        content="website"/>
+  <meta property="og:title"       content="Wilkens Costa – Analista de TI"/>
+  <meta property="og:description" content="Especialista em Infraestrutura, Redes e Segurança da Informação. Python · n8n · Firewall · Active Directory."/>
+  <meta property="og:locale"      content="pt_BR"/>
 
-/* ── BG IMAGE ──────────────────────────── */
-.bg-img {
-  position: fixed; inset: 0; z-index: -1;
-  background-image: url('assets/0_0_82895850bc29.png');
-  background-size: cover; background-position: center;
-  opacity: .10;
-}
+  <!-- ── Favicon (SVG inline via data URI) ── -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>"/>
 
-/* ── LAYOUT ────────────────────────────── */
-.page {
-  padding: 1rem 1rem 5rem;      /* mobile */
-  max-width: 860px;
-  margin: 0 auto;
-}
+  <!-- ── Google Fonts (cached locally in /assets) ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="assets/css2_2832c0ff631d.css" rel="stylesheet"/>
+  <link href="assets/css2_9b8bf743d4a8.css" rel="stylesheet"/>
+  <link href="assets/css2_86e10c4bcbd4.css" rel="stylesheet"/>
 
-/* ── CARD ──────────────────────────────── */
-.card {
-  background: var(--glass);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,.5);
-  padding: 1.5rem;              /* mobile */
-  margin-bottom: 1rem;
-  box-shadow: var(--shadow);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: rgba(255,255,255,.15) 0 1px 1px inset,
-              rgba(50,50,93,.28) 0 40px 90px -15px,
-              rgba(0,0,0,.25) 0 22px 55px -20px;
-}
-
-/* ── ANIMATIONS ────────────────────────── */
-.fade-in  { animation: fadeIn  .7s ease both; }
-.slide-up { animation: slideUp .7s ease both; }
-.d1 { animation-delay: .1s; }
-.d2 { animation-delay: .2s; }
-.d3 { animation-delay: .3s; }
-.d4 { animation-delay: .4s; }
-.d5 { animation-delay: .5s; }
-.d6 { animation-delay: .6s; }
-@keyframes fadeIn  { from { opacity:0; }            to { opacity:1; } }
-@keyframes slideUp { from { opacity:0; transform: translateY(18px); } to { opacity:1; transform: translateY(0); } }
-
-/* ── SECTION TITLE ──────────────────────── */
-.section-title {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: .6rem;
-  margin-bottom: 1.25rem;
-}
-.section-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-/* ── HEADER ─────────────────────────────── */
-.header-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  background: #f1f2f3;
-  border-radius: 99px;
-  padding: .35rem .9rem;
-  font-size: .75rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.pulse {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: #22c55e;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,.6); }
-  50%       { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
-}
-
-.name {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 700;
-  font-size: clamp(2.2rem, 10vw, 4rem);
-  line-height: 1.05;
-  letter-spacing: -.02em;
-  margin-bottom: .4rem;
-}
-
-.headline {
-  font-size: clamp(.9rem, 3.5vw, 1.05rem);
-  color: var(--muted);
-  margin-bottom: 1.25rem;
-  line-height: 1.5;
-}
-
-/* ── CONTACT CHIPS ──────────────────────── */
-.chips {
-  display: grid;
-  grid-template-columns: 1fr 1fr;   /* 2 cols on mobile */
-  gap: .5rem;
-}
-.chip {
-  display: flex;
-  align-items: center;
-  gap: .45rem;
-  background: var(--glass2);
-  border: 1px solid var(--border);
-  border-radius: 99px;
-  padding: .6rem .9rem;
-  font-size: .8rem;
-  font-weight: 500;
-  color: var(--text);
-  text-decoration: none;
-  transition: all .2s;
-  white-space: nowrap;
-  overflow: hidden;
-  min-height: 44px;               /* touch target */
-}
-.chip:hover {
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(0,0,0,.10);
-  transform: translateY(-1px);
-}
-.chip svg { flex-shrink: 0; opacity: .7; }
-.chip span { overflow: hidden; text-overflow: ellipsis; }
-/* location – full width on mobile */
-.chip.full { grid-column: 1 / -1; justify-content: center; }
-
-/* ── SOBRE ──────────────────────────────── */
-.about-text {
-  font-size: .95rem;
-  color: #374151;
-  line-height: 1.8;
-}
-.about-text + .about-text { margin-top: .85rem; }
-.about-text strong { color: var(--text); font-weight: 600; }
-
-/* ── TIMELINE ───────────────────────────── */
-.timeline { display: flex; flex-direction: column; gap: 1.75rem; }
-
-.timeline-item {
-  position: relative;
-  padding-left: 1.4rem;
-}
-.timeline-item::before {
-  content: '';
-  position: absolute; left: 0; top: .55rem;
-  width: 9px; height: 9px;
-  border-radius: 50%;
-  background: var(--text);
-  border: 2px solid var(--bg);
-  box-shadow: 0 0 0 2px var(--text);
-}
-.timeline-item:not(:last-child)::after {
-  content: '';
-  position: absolute; left: 3.5px; top: 1.3rem; bottom: -1.75rem;
-  width: 1px;
-  background: var(--border);
-}
-
-.exp-header {
-  display: flex;
-  flex-direction: column;
-  gap: .2rem;
-  margin-bottom: .6rem;
-}
-.exp-role   { font-size: 1rem;  font-weight: 700; line-height: 1.3; }
-.exp-company{ font-size: .85rem; color: var(--accent); font-weight: 600; }
-.exp-date   {
-  display: inline-flex;
-  align-items: center;
-  background: #f1f2f3;
-  border-radius: 99px;
-  padding: .2rem .7rem;
-  font-size: .72rem;
-  font-weight: 600;
-  color: var(--muted);
-  width: fit-content;
-  margin-top: .1rem;
-}
-.exp-desc {
-  font-size: .875rem;
-  color: #4b5563;
-  line-height: 1.75;
-  margin-top: .5rem;
-}
-
-/* ── PILLS (skills/tags) ─────────────────── */
-.pills { display: flex; flex-wrap: wrap; gap: .4rem; margin: .55rem 0; }
-.pill {
-  display: inline-flex;
-  align-items: center;
-  background: var(--pill-bg);
-  border: 1px solid var(--border);
-  border-radius: 99px;
-  padding: .3rem .75rem;
-  font-size: .75rem;
-  font-weight: 500;
-  color: #374151;
-  transition: all .18s;
-  cursor: default;
-}
-.pill:hover { background: var(--text); color: #fff; transform: translateY(-1px); }
-
-/* ── SKILLS ─────────────────────────────── */
-.skill-group { margin-bottom: 1.1rem; }
-.skill-group:last-child { margin-bottom: 0; }
-.skill-group-label {
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: .55rem;
-}
-.skill-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
-.skill-pill {
-  background: var(--glass2);
-  border: 1px solid var(--border);
-  border-radius: 99px;
-  padding: .45rem .9rem;
-  font-size: .82rem;
-  font-weight: 500;
-  transition: all .2s;
-  cursor: default;
-  min-height: 36px;
-  display: flex; align-items: center;
-}
-.skill-pill:hover { background: var(--text); color: #fff; transform: translateY(-2px); }
-
-/* ── CERT CARDS ─────────────────────────── */
-.cert-grid {
-  display: grid;
-  grid-template-columns: 1fr;   /* 1 col mobile */
-  gap: .85rem;
-}
-.cert-card {
-  background: var(--glass2);
-  border: 1px solid rgba(255,255,255,.7);
-  border-radius: var(--radius-sm);
-  padding: 1.25rem;
-  position: relative;
-  overflow: hidden;
-  transition: all .25s;
-}
-.cert-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.12); }
-.cert-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, #0f0f0f, #6b7280);
-}
-.cert-issuer {
-  font-size: .7rem; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: .35rem;
-}
-.cert-name  { font-size: .95rem; font-weight: 700; margin-bottom: .6rem; line-height: 1.4; }
-.cert-meta  { font-size: .75rem; color: var(--muted); margin-bottom: .2rem; }
-.cert-meta-mono { font-size: .68rem; color: #9ca3af; font-family: monospace; margin-bottom: .75rem; }
-.cert-link {
-  display: inline-flex; align-items: center; gap: .3rem;
-  font-size: .8rem; font-weight: 600; color: var(--text);
-  text-decoration: none; transition: gap .2s;
-}
-.cert-link:hover { gap: .55rem; }
-
-/* ── COURSES ────────────────────────────── */
-.course-list { display: flex; flex-direction: column; gap: .5rem; }
-.course-row {
-  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
-  background: rgba(255,255,255,.5);
-  border: 1px solid rgba(255,255,255,.6);
-  border-radius: var(--radius-sm);
-  padding: .85rem 1rem;
-  transition: all .2s;
-  min-height: 54px;
-}
-.course-row:hover { background: rgba(255,255,255,.85); transform: translateX(4px); }
-.course-name   { font-size: .875rem; font-weight: 600; line-height: 1.3; }
-.course-school { font-size: .75rem; color: var(--muted); margin-top: .1rem; }
-.course-tag {
-  flex-shrink: 0;
-  font-size: .7rem; font-weight: 600;
-  background: #f1f2f3; border: 1px solid var(--border);
-  border-radius: 99px; padding: .2rem .65rem;
-  color: var(--muted); white-space: nowrap;
-}
-
-/* ── EDU CARDS ──────────────────────────── */
-.edu-grid {
-  display: grid;
-  grid-template-columns: 1fr;   /* 1 col mobile */
-  gap: .85rem;
-}
-.edu-card {
-  border-radius: var(--radius-sm);
-  padding: 1.25rem;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.6);
-  transition: all .25s;
-}
-.edu-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
-.edu-card.blue  { background: linear-gradient(135deg, rgba(219,234,254,.8), rgba(255,255,255,.8)); border-color: #bfdbfe; }
-.edu-icon {
-  width: 40px; height: 40px; border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: .75rem;
-}
-.edu-level { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; }
-.edu-course { font-size: .95rem; font-weight: 700; }
-.edu-school { font-size: .8rem; color: var(--muted); margin-top: .15rem; }
-
-/* ── FLOATING CTA (MOBILE) ──────────────── */
-.fab {
-  display: flex;
-  position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 100;
-  align-items: center; gap: .5rem;
-  background: var(--text); color: #fff;
-  border-radius: 99px;
-  padding: .8rem 1.2rem;
-  font-size: .82rem; font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 8px 30px rgba(0,0,0,.3);
-  transition: all .2s;
-  border: none; cursor: pointer;
-}
-.fab:hover { transform: scale(1.05); box-shadow: 0 12px 36px rgba(0,0,0,.4); }
-
-/* ── DIVIDER ────────────────────────────── */
-.divider { height: 1px; background: rgba(255,255,255,.3); margin: 1rem 0; }
-
-/* ═══════════ TABLET & DESKTOP ═══════════ */
-@media (min-width: 560px) {
-  .page     { padding: 1.5rem 1.5rem 5rem; }
-  .card     { padding: 2rem; }
-  .chips    { grid-template-columns: repeat(3, auto); width: max-content; gap: .5rem; }
-  .chip.full{ grid-column: auto; }
-  .cert-grid{ grid-template-columns: 1fr 1fr; }
-  .edu-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (min-width: 768px) {
-  .page    { padding: 2.5rem 2rem 5rem; }
-  .card    { padding: 2.5rem; margin-bottom: 1.5rem; }
-  .chips   { display: flex; flex-wrap: wrap; width: auto; }
-  .chip    { font-size: .85rem; }
-  .chip.full { width: auto; }
-  .fab     { display: none; }  /* hide FAB on desktop – contact visible */
-}
-</style>
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<div class="bg-img"></div>
 
-<!-- ── FLOATING WHATSAPP BUTTON (mobile only) ── -->
-<a href="https://wa.me/5585986177778?text=Olá%20Wilkens!%20Vi%20seu%20currículo%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="fab" id="fab-whatsapp" aria-label="Falar pelo WhatsApp">
-  <!-- WhatsApp icon -->
-  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+<!-- Background texture -->
+<div class="bg-img" aria-hidden="true"></div>
+
+<!-- ── Floating WhatsApp Button (visible on mobile only) ── -->
+<a href="https://wa.me/5585986177778?text=Olá%20Wilkens!%20Vi%20seu%20currículo%20e%20gostaria%20de%20conversar."
+   target="_blank" rel="noopener noreferrer"
+   class="fab" id="fab-whatsapp" aria-label="Falar pelo WhatsApp">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.52 5.853L.057 23.617a.5.5 0 0 0 .625.61l5.928-1.55A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.368l-.36-.214-3.716.972.994-3.61-.235-.374A9.818 9.818 0 1 1 12 21.818z"/>
   </svg>
@@ -419,14 +48,15 @@ body {
 
 <div class="page">
 
-  <!-- ═══ HEADER ══════════════════════════ -->
+  <!-- ══════════════════════════════════
+       HEADER
+  ══════════════════════════════════ -->
   <div class="card slide-up" id="header">
 
-    <!-- Currículo label -->
-    <div style="font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#9ca3af; margin-bottom:.6rem;">Currículo Profissional</div>
+    <p class="curriculum-label">Currículo Profissional</p>
 
     <div class="header-badge">
-      <span class="pulse"></span>
+      <span class="pulse" aria-hidden="true"></span>
       Disponível para oportunidades
     </div>
 
@@ -437,10 +67,13 @@ body {
     </p>
 
     <!-- Contact chips -->
-    <div class="chips">
+    <nav class="chips" aria-label="Contatos">
 
-      <a href="https://wa.me/5585986177778?text=Olá%20Wilkens!%20Vi%20seu%20currículo%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="chip" id="chip-whatsapp" style="background:rgba(37,211,102,.12); border-color:rgba(37,211,102,.35);">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="#25d366">
+      <a href="https://wa.me/5585986177778?text=Olá%20Wilkens!%20Vi%20seu%20currículo%20e%20gostaria%20de%20conversar."
+         target="_blank" rel="noopener noreferrer"
+         class="chip" id="chip-whatsapp"
+         style="background:rgba(37,211,102,.12); border-color:rgba(37,211,102,.35);">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#25d366" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
           <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.52 5.853L.057 23.617a.5.5 0 0 0 .625.61l5.928-1.55A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.368l-.36-.214-3.716.972.994-3.61-.235-.374A9.818 9.818 0 1 1 12 21.818z"/>
         </svg>
@@ -448,36 +81,38 @@ body {
       </a>
 
       <a href="mailto:wilkens.costa@outlook.com" class="chip" id="chip-email">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         <span>wilkens.costa@outlook.com</span>
       </a>
 
-      <a href="https://www.linkedin.com/in/wilkens-costa/" target="_blank" rel="noopener" class="chip" id="chip-linkedin">
-        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      <a href="https://www.linkedin.com/in/wilkens-costa/" target="_blank" rel="noopener noreferrer" class="chip" id="chip-linkedin">
+        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
         <span>LinkedIn</span>
       </a>
 
-      <a href="https://github.com/wilkens-costa" target="_blank" rel="noopener" class="chip" id="chip-github">
-        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      <a href="https://github.com/wilkens-costa" target="_blank" rel="noopener noreferrer" class="chip" id="chip-github">
+        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         <span>GitHub</span>
       </a>
 
-      <a href="https://instagram.com/wiiilkens" target="_blank" rel="noopener" class="chip" id="chip-instagram">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+      <a href="https://instagram.com/wiiilkens" target="_blank" rel="noopener noreferrer" class="chip" id="chip-instagram">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
         <span>Instagram</span>
       </a>
 
-      <span class="chip full" id="chip-location">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span class="chip full" id="chip-location" aria-label="Localização">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         <span>Ceará, Brasil · 27 anos</span>
       </span>
 
-    </div>
-  </div>
+    </nav>
+  </div><!-- /#header -->
 
-  <!-- ═══ SOBRE ════════════════════════════ -->
-  <div class="card slide-up d1" id="sobre">
-    <p class="section-title">Sobre</p>
+  <!-- ══════════════════════════════════
+       SOBRE
+  ══════════════════════════════════ -->
+  <section class="card slide-up d1" id="sobre" aria-labelledby="titulo-sobre">
+    <h2 class="section-title" id="titulo-sobre">Sobre</h2>
 
     <p class="about-text">
       Sou um <strong>Analista de TI</strong> especializado em infraestrutura, redes e segurança da informação,
@@ -492,290 +127,297 @@ body {
       com foco em UX/UI — de plataformas SaaS a sistemas completos de gestão de serviços. Essa visão
       multidisciplinar me permite construir ecossistemas tecnológicos inovadores, seguros e altamente funcionais.
     </p>
-  </div>
+  </section>
 
-  <!-- ═══ EXPERIÊNCIA ══════════════════════ -->
-  <div class="card slide-up d2" id="experiencia">
-    <p class="section-title">Experiência Profissional</p>
+  <!-- ══════════════════════════════════
+       EXPERIÊNCIA PROFISSIONAL
+  ══════════════════════════════════ -->
+  <section class="card slide-up d2" id="experiencia" aria-labelledby="titulo-exp">
+    <h2 class="section-title" id="titulo-exp">Experiência Profissional</h2>
 
-    <div class="timeline">
+    <ol class="timeline" aria-label="Histórico profissional">
 
-      <!-- San Paolo -->
-      <div class="timeline-item" id="exp-sanpaolo">
+      <!-- San Paolo Gelato -->
+      <li class="timeline-item" id="exp-sanpaolo">
         <div class="exp-header">
           <p class="exp-role">Assistente em T.I.</p>
           <p class="exp-company">San Paolo Gelato</p>
-          <span class="exp-date">Dez 2024 – Dez 2025</span>
+          <time class="exp-date" datetime="2024-12/2025-12">Dez 2024 – Dez 2025</time>
         </div>
-        <div class="pills">
-          <span class="pill">PDV (Linx)</span>
-          <span class="pill">ERP (Athenas)</span>
-          <span class="pill">Helpdesk</span>
-          <span class="pill">Manutenção</span>
-        </div>
+        <ul class="pills" aria-label="Tecnologias utilizadas">
+          <li class="pill">PDV (Linx)</li>
+          <li class="pill">ERP (Athenas)</li>
+          <li class="pill">Helpdesk</li>
+          <li class="pill">Manutenção</li>
+        </ul>
         <p class="exp-desc">
           Suporte técnico de TI (Helpdesk) e manutenção de equipamentos. Atendimento direto para sistemas
           de PDV (Linx) e ERP (Athenas), garantindo continuidade operacional do ambiente de varejo.
         </p>
-      </div>
+      </li>
 
-      <!-- Izzi – Auxiliar -->
-      <div class="timeline-item" id="exp-izzi-auxiliar">
+      <!-- Izzi Cobrança – Auxiliar -->
+      <li class="timeline-item" id="exp-izzi-auxiliar">
         <div class="exp-header">
           <p class="exp-role">Auxiliar em T.I.</p>
           <p class="exp-company">Izzi Cobrança</p>
-          <span class="exp-date">Nov 2024 – Dez 2024</span>
+          <time class="exp-date" datetime="2024-11/2024-12">Nov 2024 – Dez 2024</time>
         </div>
-        <div class="pills">
-          <span class="pill">Firewall</span>
-          <span class="pill">Active Directory</span>
-          <span class="pill">GPO</span>
-          <span class="pill">Redes</span>
-          <span class="pill">Segurança da Informação</span>
-          <span class="pill">Telecom</span>
-        </div>
+        <ul class="pills" aria-label="Tecnologias utilizadas">
+          <li class="pill">Firewall</li>
+          <li class="pill">Active Directory</li>
+          <li class="pill">GPO</li>
+          <li class="pill">Redes</li>
+          <li class="pill">Segurança da Informação</li>
+          <li class="pill">Telecom</li>
+        </ul>
         <p class="exp-desc">
           Gestão e suporte à Segurança da Informação, administração de Firewall, Telecom e Infraestrutura
           de Redes. Gerenciamento de Active Directory e GPOs para garantir conformidade e estabilidade
           do ambiente corporativo.
         </p>
-      </div>
+      </li>
 
-      <!-- Izzi – Estagiário -->
-      <div class="timeline-item" id="exp-izzi-estagio">
+      <!-- Izzi Cobrança – Estagiário -->
+      <li class="timeline-item" id="exp-izzi-estagio">
         <div class="exp-header">
           <p class="exp-role">Estagiário em T.I.</p>
           <p class="exp-company">Izzi Cobrança</p>
-          <span class="exp-date">Jun 2023 – Nov 2024</span>
+          <time class="exp-date" datetime="2023-06/2024-11">Jun 2023 – Nov 2024</time>
         </div>
-        <div class="pills">
-          <span class="pill">Suporte Técnico</span>
-          <span class="pill">Manutenção de Estações</span>
-          <span class="pill">Helpdesk</span>
-        </div>
+        <ul class="pills" aria-label="Tecnologias utilizadas">
+          <li class="pill">Suporte Técnico</li>
+          <li class="pill">Manutenção de Estações</li>
+          <li class="pill">Helpdesk</li>
+        </ul>
         <p class="exp-desc">
           Suporte inicial, manutenção de estações de trabalho e introdução às tecnologias da empresa —
           base prática que originou a especialização em infraestrutura e segurança.
         </p>
-      </div>
+      </li>
 
       <!-- Freelancer -->
-      <div class="timeline-item" id="exp-freelancer">
+      <li class="timeline-item" id="exp-freelancer">
         <div class="exp-header">
           <p class="exp-role">Web Developer &amp; Designer</p>
           <p class="exp-company">Freelancer · Projetos Próprios &amp; Clientes</p>
-          <span class="exp-date">2022 – Presente</span>
+          <time class="exp-date" datetime="2022">2022 – Presente</time>
         </div>
-        <div class="pills">
-          <span class="pill">UX/UI Design</span>
-          <span class="pill">Identidade Visual</span>
-          <span class="pill">Photoshop</span>
-          <span class="pill">WordPress</span>
-          <span class="pill">Vibe Coding</span>
-          <span class="pill">Vibe Design</span>
-        </div>
+        <ul class="pills" aria-label="Tecnologias utilizadas">
+          <li class="pill">UX/UI Design</li>
+          <li class="pill">Identidade Visual</li>
+          <li class="pill">Photoshop</li>
+          <li class="pill">WordPress</li>
+          <li class="pill">Vibe Coding</li>
+          <li class="pill">Vibe Design</li>
+        </ul>
         <p class="exp-desc">
           Desenvolvimento de produtos digitais do zero — identidade visual, design de interfaces e
           plataformas SaaS completas: listas de compras inteligentes, assistentes financeiros e
           sistemas de gestão de serviços com impacto real.
         </p>
-      </div>
+      </li>
 
-    </div>
-  </div>
+    </ol>
+  </section><!-- /#experiencia -->
 
-  <!-- ═══ STACK ════════════════════════════ -->
-  <div class="card slide-up d3" id="skills">
-    <p class="section-title">Stack &amp; Habilidades</p>
+  <!-- ══════════════════════════════════
+       STACK & HABILIDADES
+  ══════════════════════════════════ -->
+  <section class="card slide-up d3" id="skills" aria-labelledby="titulo-skills">
+    <h2 class="section-title" id="titulo-skills">Stack &amp; Habilidades</h2>
 
     <div class="skill-group">
       <p class="skill-group-label">Infraestrutura &amp; Segurança</p>
-      <div class="skill-pills">
-        <span class="skill-pill">Firewall</span>
-        <span class="skill-pill">Active Directory</span>
-        <span class="skill-pill">GPO</span>
-        <span class="skill-pill">Windows Server</span>
-        <span class="skill-pill">BitDefender</span>
-        <span class="skill-pill">Kaspersky</span>
-        <span class="skill-pill">Telecom</span>
-      </div>
+      <ul class="skill-pills" aria-label="Infraestrutura e segurança">
+        <li class="skill-pill">Firewall</li>
+        <li class="skill-pill">Active Directory</li>
+        <li class="skill-pill">GPO</li>
+        <li class="skill-pill">Windows Server</li>
+        <li class="skill-pill">BitDefender</li>
+        <li class="skill-pill">Kaspersky</li>
+        <li class="skill-pill">Telecom</li>
+      </ul>
     </div>
 
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <div class="skill-group">
       <p class="skill-group-label">Automação &amp; IA</p>
-      <div class="skill-pills">
-        <span class="skill-pill">n8n</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">Streamlit</span>
-        <span class="skill-pill">LangChain</span>
-        <span class="skill-pill">Engenharia de Prompts</span>
-        <span class="skill-pill">SQL</span>
-      </div>
+      <ul class="skill-pills" aria-label="Automação e IA">
+        <li class="skill-pill">n8n</li>
+        <li class="skill-pill">Python</li>
+        <li class="skill-pill">Streamlit</li>
+        <li class="skill-pill">LangChain</li>
+        <li class="skill-pill">Engenharia de Prompts</li>
+        <li class="skill-pill">SQL</li>
+      </ul>
     </div>
 
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <div class="skill-group">
       <p class="skill-group-label">Design &amp; Web</p>
-      <div class="skill-pills">
-        <span class="skill-pill">UX/UI Design</span>
-        <span class="skill-pill">Photoshop</span>
-        <span class="skill-pill">WordPress</span>
-        <span class="skill-pill">Vibe Coding</span>
-        <span class="skill-pill">ERP &amp; PDV</span>
-        <span class="skill-pill">Inglês Técnico</span>
-      </div>
+      <ul class="skill-pills" aria-label="Design e web">
+        <li class="skill-pill">UX/UI Design</li>
+        <li class="skill-pill">Photoshop</li>
+        <li class="skill-pill">WordPress</li>
+        <li class="skill-pill">Vibe Coding</li>
+        <li class="skill-pill">ERP &amp; PDV</li>
+        <li class="skill-pill">Inglês Técnico</li>
+      </ul>
     </div>
-  </div>
+  </section><!-- /#skills -->
 
-  <!-- ═══ CERTIFICAÇÕES ════════════════════ -->
-  <div class="card slide-up d4" id="certificacoes">
-    <p class="section-title">Certificações</p>
+  <!-- ══════════════════════════════════
+       CERTIFICAÇÕES
+  ══════════════════════════════════ -->
+  <section class="card slide-up d4" id="certificacoes" aria-labelledby="titulo-certs">
+    <h2 class="section-title" id="titulo-certs">Certificações</h2>
     <div class="cert-grid">
 
-      <div class="cert-card" id="cert-ibsec">
+      <article class="cert-card" id="cert-ibsec">
         <p class="cert-issuer">IBSEC · Instituto Brasileiro de Cibersegurança</p>
-        <p class="cert-name">Boas Práticas de Cibersegurança (Cybersecurity Awareness)</p>
+        <h3 class="cert-name">Boas Práticas de Cibersegurança (Cybersecurity Awareness)</h3>
         <p class="cert-meta">📅 Novembro de 2024 &nbsp;·&nbsp; Válida até nov/2027</p>
         <p class="cert-meta-mono">IC-SEC-1780 · ISO 17024 READY</p>
-        <a href="https://certs.ibsec.com.br/?cert_hash=8e4b78152c5aa1cc" target="_blank" rel="noopener" class="cert-link" id="cert-ibsec-link">
+        <a href="https://certs.ibsec.com.br/?cert_hash=8e4b78152c5aa1cc"
+           target="_blank" rel="noopener noreferrer"
+           class="cert-link" id="cert-ibsec-link">
           Verificar certificado
-          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-      </div>
+      </article>
 
-      <div class="cert-card" id="cert-n8n">
+      <article class="cert-card" id="cert-n8n">
         <p class="cert-issuer">Asimov Academy</p>
-        <p class="cert-name">Dominando Automações com n8n</p>
+        <h3 class="cert-name">Dominando Automações com n8n</h3>
         <p class="cert-meta">📅 Setembro de 2025 &nbsp;·&nbsp; 4 horas</p>
         <p class="cert-meta-mono">bcadce45-5b1c-41fb-ac4a-d49b7837ba25</p>
-        <a href="https://hub.asimov.academy/validar-certificado/bcadce45-5b1c-41fb-ac4a-d49b7837ba25" target="_blank" rel="noopener" class="cert-link" id="cert-n8n-link">
+        <a href="https://hub.asimov.academy/validar-certificado/bcadce45-5b1c-41fb-ac4a-d49b7837ba25"
+           target="_blank" rel="noopener noreferrer"
+           class="cert-link" id="cert-n8n-link">
           Verificar certificado
-          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-      </div>
+      </article>
 
     </div>
-  </div>
+  </section><!-- /#certificacoes -->
 
-  <!-- ═══ CURSOS ═══════════════════════════ -->
-  <div class="card slide-up d5" id="cursos">
-    <p class="section-title">Cursos &amp; Formação Complementar</p>
-    <div class="course-list">
+  <!-- ══════════════════════════════════
+       CURSOS
+  ══════════════════════════════════ -->
+  <section class="card slide-up d5" id="cursos" aria-labelledby="titulo-cursos">
+    <h2 class="section-title" id="titulo-cursos">Cursos &amp; Formação Complementar</h2>
+    <ul class="course-list">
 
-      <div class="course-row" id="course-langchain">
+      <li class="course-row" id="course-langchain">
         <div>
           <p class="course-name">LangChain 1.0 – Agentes e RAG com Python</p>
           <p class="course-school">Asimov Academy</p>
         </div>
         <span class="course-tag">AI</span>
-      </div>
+      </li>
 
-      <div class="course-row" id="course-streamlit">
+      <li class="course-row" id="course-streamlit">
         <div>
           <p class="course-name">Streamlit – Data Apps com Python</p>
           <p class="course-school">Asimov Academy</p>
         </div>
         <span class="course-tag">Python</span>
-      </div>
+      </li>
 
-      <div class="course-row" id="course-python-empresas">
+      <li class="course-row" id="course-python-empresas">
         <div>
           <p class="course-name">Python para Empresas</p>
           <p class="course-school">Asimov Academy</p>
         </div>
         <span class="course-tag">Automação</span>
-      </div>
+      </li>
 
-      <div class="course-row" id="course-prompts">
+      <li class="course-row" id="course-prompts">
         <div>
           <p class="course-name">Engenharia de Prompts</p>
           <p class="course-school">Asimov Academy</p>
         </div>
         <span class="course-tag">AI</span>
-      </div>
+      </li>
 
-      <div class="course-row" id="course-frontend">
+      <li class="course-row" id="course-frontend">
         <div>
           <p class="course-name">Front-end / Back-end</p>
           <p class="course-school">Alura</p>
         </div>
         <span class="course-tag">Web Dev</span>
-      </div>
+      </li>
 
-      <div class="course-row" id="course-python-alura">
+      <li class="course-row" id="course-python-alura">
         <div>
           <p class="course-name">Python: Avançando na Linguagem</p>
           <p class="course-school">Alura</p>
         </div>
         <span class="course-tag">Python</span>
-      </div>
+      </li>
 
-      <div class="course-row" id="course-wordpress">
+      <li class="course-row" id="course-wordpress">
         <div>
           <p class="course-name">WordPress: Sites com Elementor</p>
           <p class="course-school">Alura</p>
         </div>
         <span class="course-tag">CMS</span>
-      </div>
+      </li>
 
-    </div>
-  </div>
+    </ul>
+  </section><!-- /#cursos -->
 
-  <!-- ═══ FORMAÇÃO ═════════════════════════ -->
-  <div class="card slide-up d6" id="formacao">
-    <p class="section-title">Formação Acadêmica</p>
+  <!-- ══════════════════════════════════
+       FORMAÇÃO ACADÊMICA
+  ══════════════════════════════════ -->
+  <section class="card slide-up d6" id="formacao" aria-labelledby="titulo-edu">
+    <h2 class="section-title" id="titulo-edu">Formação Acadêmica</h2>
     <div class="edu-grid">
 
-      <div class="edu-card blue" id="edu-superior">
+      <article class="edu-card blue" id="edu-superior">
         <div class="edu-icon" style="background:#dbeafe;">
-          <svg width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <svg width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         </div>
         <p class="edu-level" style="color:#2563eb;">Superior · Em andamento</p>
         <p class="edu-course">Análise e Desenvolvimento de Sistemas</p>
         <p class="edu-school">Unifametro · Início: 2022</p>
-      </div>
+      </article>
 
-      <div class="edu-card" id="edu-medio">
+      <article class="edu-card" id="edu-medio">
         <div class="edu-icon" style="background:#f3f4f6;">
-          <svg width="20" height="20" fill="none" stroke="#6b7280" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <svg width="20" height="20" fill="none" stroke="#6b7280" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
         </div>
         <p class="edu-level">Ensino Médio Completo</p>
         <p class="edu-course">Ensino Médio</p>
         <p class="edu-school">Colégio 21 Educar · Conclusão: 2016</p>
-      </div>
+      </article>
 
     </div>
-  </div>
+  </section><!-- /#formacao -->
 
-  <!-- ═══ FOOTER ════════════════════════════ -->
-  <footer style="text-align:center; padding: 1.5rem 0 .5rem; font-size:.8rem; color: var(--muted);">
-    <p>Wilkens Costa &nbsp;·&nbsp; <a href="mailto:wilkens.costa@outlook.com" style="color:var(--text); text-decoration:none; font-weight:600;">wilkens.costa@outlook.com</a></p>
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer style="text-align:center; padding:1.5rem 0 .5rem; font-size:.8rem; color:var(--muted);">
+    <p>Wilkens Costa &nbsp;·&nbsp;
+      <a href="mailto:wilkens.costa@outlook.com"
+         style="color:var(--text); text-decoration:none; font-weight:600;">
+        wilkens.costa@outlook.com
+      </a>
+    </p>
     <p style="margin-top:.3rem; opacity:.5; font-size:.72rem;">Atualizado em março de 2026</p>
   </footer>
 
-</div><!-- /page -->
+</div><!-- /.page -->
 
-<script src="assets/lucide_latest_2eebd0ebe8c2.js"></script>
-<script>
-  lucide.createIcons();
+<!-- ── Scripts (defer = no render blocking) ── -->
+<script src="assets/resource_3fa48481346f.js"   defer></script>
+<script src="assets/lucide_latest_2eebd0ebe8c2.js" defer></script>
+<script src="js/main.js" defer></script>
 
-  // Intersection Observer – trigger animations when scrolled into view
-  const observer = new IntersectionObserver(
-    (entries) => entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.animationPlayState = 'running';
-        observer.unobserve(e.target);
-      }
-    }),
-    { threshold: 0.08 }
-  );
-  document.querySelectorAll('.slide-up').forEach(el => {
-    el.style.animationPlayState = 'paused';
-    observer.observe(el);
-  });
-</script>
 </body>
 </html>
